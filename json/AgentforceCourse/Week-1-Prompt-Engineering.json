@@ -1,38 +1,52 @@
 [
-    {
-        "question": "Which tool can be used to define standardized prompts for quick and consistent AI-Generated Responses?",
-        "answer": "Prompt Builder"
-    },
-    {
-        "question": "Which type of prompt template can utilize data from multiple unrelated objects?",
-        "answer": "Flex Prompt Template"
-    },
-    {
-        "question": "Which type of prompt template can be created to define a reusable prompt that automatically populates a dynamic form field?",
-        "answer": "Field Generation Prompt Template"
-    },
-    {
-        "question": "Which type of prompt template can be created to allow users to draft personalized emails for customers?",
-        "answer": "Sales Emails Prompt Templates"
-    },
-    {
-        "question": "Which permission set can be assigned to a user who needs to access and run prompt templates?",
-        "answer": "Prompt Template User"
-    },
-    {
-        "question": "Which permission set can be assigned to users who need to create and manage prompt templates?",
-        "answer": "Prompt Template Manager"
-    },
-    {
-        "question": "Which permission set must be assigned to a user who needs to draft emails using Einstein Generative AI?",
-        "answer": "Einstein Sales Emails"
-    },
-    {
-        "question": "If a user cannot see the generative AI-enabled icon next to a field that uses a field generation template, what is the most likely cause?",
-        "answer": "The prompt user permission set is not assigned to the user"
-    },
-    {
-        "question": "How can contextual information be provided to the LLM in a prompt template?",
-        "answer": "By asking it to role play as a character, such as a sales representative"
-    }
+  { "question": "Which type of reasoning is used by Generative AI to handle variation and ambiguity?", "answer": "Probabilistic reasoning." },
+  { "question": "Traditional automation is preferred over Generative AI when a rule must execute based on _____.", "answer": "Explicit rules." },
+  { "question": "What specific behavior does 'Agentic AI' add to standard AI systems?", "answer": "Goal-directed behavior." },
+  { "question": "Which component in Agentforce architecture is responsible for 'Topic / Subagent Selection'?", "answer": "The Reasoning Engine + LLM." },
+  { "question": "Step 2 of the Agent Reasoning Lifecycle involves interpreting intent and _____.", "answer": "Relevant context." },
+  { "question": "What is the final step of the Agent Reasoning Lifecycle?", "answer": "Continue reasoning or produce a response." },
+  { "question": "The LLM is particularly useful for extracting meaning from _____ context.", "answer": "Conversational." },
+  { "question": "What should the LLM not be treated as in a business environment?", "answer": "The system of record or a substitute for deterministic logic." },
+  { "question": "Which component orchestrates behavior by considering deterministic logic defined in Agent Script?", "answer": "The Reasoning Engine." },
+  { "question": "In Agentforce, 'Context' is defined as information available to the agent at what specific time?", "answer": "The moment it reasons." },
+  { "question": "Name one component of 'Agent Context' related to data retrieval.", "answer": "Retrieved business data (or Grounded knowledge)." },
+  { "question": "What is a primary advantage of using 'Standard' or preconfigured agents?", "answer": "They provide a faster starting point for common business patterns." },
+  { "question": "Why do 'Custom' agents require deliberate design and governance?", "answer": "They use tailored roles, instructions, and logic for organization-specific processes." },
+  { "question": "Employee-facing agents often assist with productivity and operate within _____ employee context.", "answer": "Authenticated." },
+  { "question": "Customer-facing agents require careful design for which three areas besides identity?", "answer": "Access, escalation, and customer-experience design." },
+  { "question": "Agentforce is appropriate when users express their needs using _____.", "answer": "Natural language." },
+  { "question": "Deterministic automation is preferable when transactional _____ is critical.", "answer": "Integrity." },
+  { "question": "Under what condition is deterministic automation like Flow or Apex preferable to agent reasoning?", "answer": "When a rule should always execute the same way." },
+  { "question": "A _____ groups a coherent area of responsibility for an Agentforce agent.", "answer": "Topic (or subagent)." },
+  { "question": "What is the 2026 terminology note regarding the term 'Topic'?", "answer": "Salesforce increasingly uses 'subagent' instead." },
+  { "question": "What tells the agent specifically when a topic or subagent is relevant to a request?", "answer": "A classification description." },
+  { "question": "What is the primary problem caused by overlapping topics?", "answer": "Ambiguous routing and less predictable behavior." },
+  { "question": "What should be used to make the difference between neighboring topic capabilities obvious?", "answer": "Clear exclusions and specific verbs/objects." },
+  { "question": "What are 'Actions' in the context of an Agentforce agent?", "answer": "Tools that let an agent do work or retrieve information." },
+  { "question": "Name three common sources for Agentforce actions.", "answer": "Flows, Apex, and Prompt templates." },
+  { "question": "Which type of action is best for declarative business processes and record operations?", "answer": "Flow action." },
+  { "question": "Which type of action is best for complex programmatic logic or specialized integrations?", "answer": "Apex action." },
+  { "question": "When is a 'Prompt template action' considered the best implementation choice?", "answer": "When the task itself is a controlled generative-AI transformation." },
+  { "question": "Action _____ tell the action what it needs to perform its task.", "answer": "Inputs." },
+  { "question": "Action _____ provide the reasoning engine with structured data to work with.", "answer": "Outputs." },
+  { "question": "Poorly _____ actions can create the same ambiguity as overlapping topics.", "answer": "Differentiated." },
+  { "question": "Action instructions help the agent understand when a tool should be used and what _____ is required.", "answer": "Information." },
+  { "question": "Name the three levels of instructions in Agentforce.", "answer": "Agent-level, Topic/Subagent-level, and Action-level." },
+  { "question": "Which level of instructions applies broadly across the entire agent?", "answer": "Agent-level." },
+  { "question": "Which level of instructions guides the use of a specific tool or capability?", "answer": "Action-level." },
+  { "question": "What is the design principle for placing instructions at different hierarchy levels?", "answer": "Put guidance at the narrowest level that correctly owns the behavior." },
+  { "question": "Conflicts in the instruction hierarchy make agent behavior _____.", "answer": "Less predictable." },
+  { "question": "Predictability improves when clear classifications are combined with _____ logic for hard business rules.", "answer": "Deterministic." },
+  { "question": "What is the final step in the Agent Builder Workflow?", "answer": "Activate when ready." },
+  { "question": "During agent configuration, what should be defined to ensure proper evaluation of results?", "answer": "Testing scenarios." },
+  { "question": "In the 'Preview' tool, builders should test both the happy path and the _____ path.", "answer": "Uncomfortable." },
+  { "question": "What should a builder inspect in Preview to diagnose an incorrect response?", "answer": "Which subagent, action, instructions, and reasoning were used." },
+  { "question": "Which view is the default low-code authoring experience in Agent Builder?", "answer": "Canvas View." },
+  { "question": "Script View assists with debugging through autocomplete, validation, and _____.", "answer": "Syntax highlighting." },
+  { "question": "What is the key point regarding the relationship between Canvas and Script views?", "answer": "They are two views of the same agent configuration." },
+  { "question": "If an agent routes a request to a general FAQ topic instead of Appointment Management, what design area should be reviewed first?", "answer": "Topic/subagent classification descriptions and overlap." },
+  { "question": "If an agent ignores a mandatory approval rule, what is the best approach to fix the behavior?", "answer": "Encode the threshold and approval path deterministically." },
+  { "question": "Action instructions help the agent understand what information is _____.", "answer": "Required." },
+  { "question": "What should a builder do in Script view after making precise sequencing changes?", "answer": "Save and resolve validation errors." },
+  { "question": "Agent context includes user information, variables, and _____ knowledge.", "answer": "Grounded." }
 ]
