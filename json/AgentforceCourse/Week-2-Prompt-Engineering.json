@@ -1,38 +1,46 @@
 [
-{
-        "question": "How should instructions be included in a prompt template to differentiate between context and instructions?",
-        "answer": "Instructions should be in a separate section and surrounded by triple quotes (\"\"\" \"\"\")"
-    },
-    {
-        "question": "Which related list merge field is not supported for the Account Object?",
-        "answer": "Activities"
-    },
-    {
-        "question": "Which feature enables the use of a field generation prompt template on a Lightning record page?",
-        "answer": "Dynamic Forms"
-    },
-    {
-        "question": "Which type of flow can be used to bring data from unified Data Cloud objects into a prompted template?",
-        "answer": "Template-Triggered Prompt Flow"
-    },
-    {
-        "question": "Which grounding technique can be used to ground a template with data stored in a lead record?",
-        "answer": "Grounding with record merge fields"
-    },
-    {
-        "question": "Which type of merge field can be used to ground a prompt template with the most recent opportunities related to an account?",
-        "answer": "Flow Merge Field"
-    },
-    {
-        "question": "Which flow element can be used to pass data from a flow to a prompted template?",
-        "answer": "Add Prompted Instructions"
-    },
-    {
-        "question": "Which workspace can be used to write prompts in Prompt Builder?",
-        "answer": "Prompt Template Workplace"
-    },
-    {
-        "question": "Which button is grayed out if the records related to the prompt have not been selected in Prompt Builder?",
-        "answer": "Preview"
-    }
+  { "question": "What is the primary goal of using Salesforce Prompt Builder?", "answer": "To create reusable generative-AI prompt templates that incorporate trusted business data." },
+  { "question": "In the context of Prompt Builder, what is a 'prompt template'?", "answer": "A reusable blueprint that combines instructions, inputs, grounding, and constraints for generation." },
+  { "question": "Name the four common Prompt Builder template types listed in the material.", "answer": "Field Generation, Record Summary, Flex, and Sales Email." },
+  { "question": "Why should prompt designers avoid hard-coding record-specific details in a template?", "answer": "To ensure the prompt remains reusable by supplying changing context at runtime." },
+  { "question": "What is the difference between 'context' and 'grounding' in prompt engineering?", "answer": "Context is what the model considers, while grounding supplies authoritative information for the task." },
+  { "question": "Which component of an effective prompt structure defines who the model should act as?", "answer": "The Role." },
+  { "question": "Which component of an effective prompt structure identifies the specific trusted information the model should use?", "answer": "The Data." },
+  { "question": "Why are 'positive instructions' preferred over negative constraints in prompt design?", "answer": "Positive, observable instructions are easier to test and provide clearer guidance to the model." },
+  { "question": "What is one specific constraint used to make a prompt more testable?", "answer": "Maximum length requirements." },
+  { "question": "When should structured output (like JSON) be used instead of free-form text?", "answer": "When downstream automation requires specific fields or reliable validation." },
+  { "question": "How does permission to say 'I don't know' affect an LLM's performance?", "answer": "It reduces the risk of hallucinations when information is missing." },
+  { "question": "What is the first step in the prompt iteration experimental design cycle?", "answer": "Defining the desired outcome." },
+  { "question": "In prompt engineering, what occurs during the 'Identify failure patterns' step of iteration?", "answer": "The designer analyzes testing results to see where the prompt consistently falls short." },
+  { "question": "What is the negative impact of a 'large context' on a prompt's performance?", "answer": "It can increase latency and cost while diluting important instructions." },
+  { "question": "What design principle helps manage a prompt's finite context budget?", "answer": "Provide the smallest set of information that is sufficient for the task." },
+  { "question": "When is 'direct record grounding' the best choice for a prompt?", "answer": "When the answer depends on fields existing on the current Salesforce record." },
+  { "question": "Which grounding scenario is used to build a profile from commerce, service, and CRM data combined?", "answer": "Grounding from Data 360." },
+  { "question": "When should 'Grounding from Knowledge' be utilized?", "answer": "When the answer should be based on curated articles or documented organizational info." },
+  { "question": "Why is 'Grounding with Flow' useful for data preparation?", "answer": "It allows context to be assembled or transformed declaratively through business processes." },
+  { "question": "Under what condition should 'Grounding with Apex' be chosen over Flow?", "answer": "When the data preparation requires complex programmatic logic or specialized query logic." },
+  { "question": "What is a 'strong signal' that Apex is required for grounding?", "answer": "Requirements that are difficult to express declaratively, such as custom integration logic." },
+  { "question": "For what type of task should LLM 'probabilistic reasoning' be used?", "answer": "Tasks requiring natural-language understanding, intent interpretation, or ambiguity handling." },
+  { "question": "What defines 'deterministic logic' in a business system?", "answer": "Logic that executes predictably and repeatably according to explicit rules." },
+  { "question": "Why is deterministic logic preferred for eligibility rules?", "answer": "Because these rules require certainty and must be auditable." },
+  { "question": "What is the primary trade-off between LLM reasoning and deterministic logic?", "answer": "LLM reasoning is flexible but variable, while deterministic logic is predictable but rigid." },
+  { "question": "List three types of business rules that should NOT be left to an LLM.", "answer": "Eligibility thresholds, exact calculations, and regulatory rules." },
+  { "question": "Define 'Hybrid Reasoning' in the context of AI agents.", "answer": "The combination of LLM reasoning for intent and deterministic logic for enforcing exact rules." },
+  { "question": "In a hybrid reasoning refund example, what role does the LLM play at the end of the process?", "answer": "Explaining the result of the deterministic logic naturally to the customer." },
+  { "question": "What is the function of an 'Agent Script'?", "answer": "It makes the boundary between LLM prompt instructions and deterministic logic explicit." },
+  { "question": "In an Agent Script, which instruction style handles branching and transitions?", "answer": "Logic instructions (deterministic)." },
+  { "question": "In an Agent Script, which instruction style handles conversational guidance?", "answer": "Prompt instructions (LLM)." },
+  { "question": "What do 'template expressions' allow a prompt to resolve?", "answer": "Changing values such as Salesforce data, variables, or action outputs." },
+  { "question": "When should a prompt use a deterministic condition for content inclusion?", "answer": "When the inclusion rule must be exact, such as checking a specific customer tier." },
+  { "question": "Why is 'Script View' preferable for complex prompt logic?", "answer": "It provides precise editing for variables, state, and complex if/else logic." },
+  { "question": "How does 'Canvas View' differ from 'Script View' in Prompt Builder?", "answer": "Canvas View offers easier visual editing, while Script View is better for precise conditions and debugging." },
+  { "question": "What grounding method is best for a policy maintained in Salesforce Knowledge?", "answer": "Knowledge grounding." },
+  { "question": "In a hybrid reasoning scenario for a refund, which element determines if 30 days have passed?", "answer": "Deterministic logic." },
+  { "question": "Grounding anchors generation to relevant _____ data rather than relying only on model knowledge.", "answer": "enterprise" },
+  { "question": "Every prompt has a finite _____ budget.", "answer": "context" },
+  { "question": "Direct record grounding is best when the 'required truth' already lives on the relevant _____ record.", "answer": "CRM" },
+  { "question": "Use _____ when the authoritative information lives outside Salesforce, such as in an external product catalog.", "answer": "External grounding" },
+  { "question": "Deterministic logic execution is auditable and _____.", "answer": "repeatable" },
+  { "question": "The _____ View is useful for syntax highlighting, autocomplete, and validation.", "answer": "Script" },
+  { "question": "An 'Agent must answer: Can I upgrade my plan?' requires the LLM to interpret the customer's _____.", "answer": "intent" }
 ]
